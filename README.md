@@ -17,7 +17,7 @@ Ett enkelt webbgränssnitt där du kan klistra in svensk text och få **adjektiv
 1. **Kloning & miljö:**
 
 ```bash
-git clone https://github.com/ermteri/markera-ordklass>.git
+git clone https://github.com/ermteri/markera-ordklass.git
 cd <ditt-repo>
 python3 -m venv env
 source env/bin/activate
