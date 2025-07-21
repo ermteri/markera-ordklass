@@ -17,8 +17,20 @@ TEMPLATE = '''
         .adverb { color: blue; font-weight: bold; }
         .verb { color: green; font-weight: bold; }
         textarea { width: 100%; height: 150px; font-size: 1em; }
-        .btn-group button {
+        .button-basic {
             margin-right: 10px;
+            font-weight: bold;
+            color: black;
+            border-radius: 2px;
+        }
+        .adj-button {
+            border: 2px solid red;
+        }
+        .adv-button {
+            border: 2px solid blue;
+        }
+        .vrb-button {
+            border: 2px solid green;
         }
         .stats {
             margin-top: 1em;
@@ -30,11 +42,9 @@ TEMPLATE = '''
     <h2>Klistra in text och välj ordklass</h2>
     <form method="POST">
         <textarea name="input_text">{{ input_text }}</textarea><br><br>
-        <div class="btn-group">
-            <button name="show_class" value="adjektiv">Visa Adjektiv</button>
-            <button name="show_class" value="adverb">Visa Adverb</button>
-            <button name="show_class" value="verb">Visa Verb</button>
-        </div>
+        <button class="button-basic adj-button" name="show_class" value="adjektiv">Visa Adjektiv</button>
+        <button class="button-basic adv-button" name="show_class" value="adverb">Visa Adverb</button>
+        <button class="button-basic vrb-button" name="show_class" value="verb">Visa Verb</button>
     </form>
     <hr>
     {% if output %}
@@ -100,5 +110,5 @@ def index():
     )
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8080)
 
