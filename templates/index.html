@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>Ordklassmarkering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Klistra in text och välj ordklass</h2>
+    <form method="POST">
+        <textarea name="input_text">{{ input_text }}</textarea><br><br>
+        <button class="button-basic adj-button" name="show_class" value="adjektiv">Visa Adjektiv</button>
+        <button class="button-basic adv-button" name="show_class" value="adverb">Visa Adverb</button>
+        <button class="button-basic pron-button" name="show_class" value="pron">Visa Pronomen</button>
+    </form>
+    <hr>
+    {% if output %}
+        <h3>Resultat:</h3>
+        <pre class="output">{{ output|safe }}</pre>
+        <div class="stats">
+            <p>Totalt antal ord: <strong>{{ total_words }}</strong></p>
+            <p>Antal {{ selected_class }}: <strong>{{ count }}</strong></p>
+            <p>Andel av totala ord: <strong>{{ percentage }}%</strong></p>
+        </div>
+    {% endif %}
+</body>
+</html>

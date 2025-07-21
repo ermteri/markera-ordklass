@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template
 import stanza
 
 app = Flask(__name__)
@@ -6,64 +6,10 @@ app = Flask(__name__)
 # Ladda svenska modellen
 nlp = stanza.Pipeline(lang='sv', processors='tokenize,pos', use_gpu=False)
 
-TEMPLATE = '''
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Ordklassmarkering</title>
-    <style>
-        .adjektiv { color: red; font-weight: bold; }
-        .adverb { color: blue; font-weight: bold; }
-        .verb { color: green; font-weight: bold; }
-        textarea { width: 100%; height: 150px; font-size: 1em; }
-        .button-basic {
-            margin-right: 10px;
-            font-weight: bold;
-            color: black;
-            border-radius: 2px;
-        }
-        .adj-button {
-            border: 2px solid red;
-        }
-        .adv-button {
-            border: 2px solid blue;
-        }
-        .vrb-button {
-            border: 2px solid green;
-        }
-        .stats {
-            margin-top: 1em;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-    <h2>Klistra in text och välj ordklass</h2>
-    <form method="POST">
-        <textarea name="input_text">{{ input_text }}</textarea><br><br>
-        <button class="button-basic adj-button" name="show_class" value="adjektiv">Visa Adjektiv</button>
-        <button class="button-basic adv-button" name="show_class" value="adverb">Visa Adverb</button>
-        <button class="button-basic vrb-button" name="show_class" value="verb">Visa Verb</button>
-    </form>
-    <hr>
-    {% if output %}
-        <h3>Resultat:</h3>
-        <p>{{ output|safe }}</p>
-        <div class="stats">
-            <p>Totalt antal ord: <strong>{{ total_words }}</strong></p>
-            <p>Antal {{ selected_class }}: <strong>{{ count }}</strong></p>
-            <p>Andel av totala ord: <strong>{{ percentage }}%</strong></p>
-        </div>
-    {% endif %}
-</body>
-</html>
-'''
-
 POS_MAPPING = {
     'ADJ': 'adjektiv',
     'ADV': 'adverb',
-    'VERB': 'verb'
+    'PRON': 'pron'
 }
 
 @app.route('/', methods=['GET', 'POST'])
@@ -74,33 +20,39 @@ def index():
     count = 0
     total_words = 0
     percentage = 0.0
-
     if request.method == 'POST':
         input_text = request.form.get('input_text', '')
         selected_class = request.form.get('show_class', '')
-        doc = nlp(input_text)
-
-        highlighted = []
+    
+        highlighted_lines = []
         class_count = 0
+        total_words = 0
 
-        for sent in doc.sentences:
-            for word in sent.words:
-                total_words += 1
-                css_class = POS_MAPPING.get(word.upos)
-                token_text = word.text
+        for line in input_text.splitlines():
+            doc = nlp(line)
+            highlighted_tokens = []
 
-                if css_class == selected_class:
-                    token_text = f'<span class="{css_class}">{token_text}</span>'
-                    class_count += 1
+            for sent in doc.sentences:
+                for word in sent.words:
+                    total_words += 1
+                    css_class = POS_MAPPING.get(word.upos)
+                    token_text = word.text
 
-                highlighted.append(token_text)
+                    if css_class == selected_class:
+                        token_text = f'<span class="{css_class}">{token_text}</span>'
+                        class_count += 1
 
-        output = ' '.join(highlighted)
+                    highlighted_tokens.append(token_text)
+
+            highlighted_line = ' '.join(highlighted_tokens)
+            highlighted_lines.append(highlighted_line)
+
+        output = '\n'.join(highlighted_lines)
         count = class_count
         percentage = round((class_count / total_words) * 100, 2) if total_words else 0.0
 
-    return render_template_string(
-        TEMPLATE,
+    return render_template(
+        'index.html',
         input_text=input_text,
         output=output,
         selected_class=selected_class,
