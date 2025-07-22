@@ -6,7 +6,7 @@ Ett enkelt webbgränssnitt där du kan klistra in svensk text och få **adjektiv
 
 ## 🚀 Funktioner
 
-- Markerar adjektiv (🔴 rött), adverb (🟢 grönt) och verb (🔵 blått)
+- Markerar adjektiv (🔴 rött), adverb (🟢 grönt) och pronomen (🔵 blått)
 - Statistik: total antal ord samt andel av varje ordklass
 - Möjlighet att visa/dölja varje ordklass med ett klick
 
@@ -43,9 +43,9 @@ python app-3.py
 ## 📝 Exempel
 Klistra in:  
 > Den vackra staden låg stilla och skimrade i den rödgula solnedgången.  
+och klicka på "Adjektiv"
 
-Du får:
-  
+Du får:  
 Resultat:  
 Den "vackra" staden låg stilla och skimrade i den "rödgula" solnedgången.  
 Totalt antal ord: 12  
