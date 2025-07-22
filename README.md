@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ## ▶️ Starta appen
 
 ```bash
-python app.py
+python app-3.py
  
 Öppna sedan `http://127.0.0.1:5000` i din webbläsare.
 
@@ -44,8 +44,9 @@ python app.py
 Klistra in:  
 > Den vackra staden låg stilla och skimrade i den rödgula solnedgången.  
 
-Du får ("vackra" och "rödgula" markerade i texten nedan):    
-Resultat:
+Du får:
+  
+<b>Resultat: </b>
 Den "vackra" staden låg stilla och skimrade i den "rödgula" solnedgången.  
 Totalt antal ord: 12  
   
