@@ -57,7 +57,7 @@ Andel av totala ord: 16.67%
 
 ## 🧾 Projektstruktur
 
-```
+```text  
 ordklassmarkerare/
 │
 ├── app-3.py                   # Flask-applikationen
