@@ -46,7 +46,7 @@ Klistra in:
 
 Du får:
   
-<b>Resultat: </b>
+Resultat:  
 Den "vackra" staden låg stilla och skimrade i den "rödgula" solnedgången.  
 Totalt antal ord: 12  
   
