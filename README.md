@@ -61,9 +61,9 @@ Andel av totala ord: 16.67%
 ├── app-3.py               # Flask-servern  
 ├── requirements.txt       # Python-beroenden  
 ├── templates/  
-       index.html         # Webbgränssnitt  
+│   └── index.html         # Webbgränssnitt  
 ├── static/  
-       style.css          # Färger och design  
+│   └── style.css          # Färger och design  
 └── .gitignore  
   
 ```
