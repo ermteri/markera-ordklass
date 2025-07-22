@@ -41,14 +41,22 @@ python app.py
 ---
 
 ## 📝 Exempel
+Klistra in:  
+> Den vackra staden låg stilla och skimrade i den rödgula solnedgången.  
 
-<img width="1672" height="906" alt="image" src="https://github.com/user-attachments/assets/78c7fc5e-440f-49e7-83ab-6b941328cc46" />
-
+Du får ("vackra" och "rödgula" markerade i texten nedan):    
+Resultat:
+Den "vackra" staden låg stilla och skimrade i den "rödgula" solnedgången.  
+Totalt antal ord: 12  
+  
+Antal adjektiv: 2  
+  
+Andel av totala ord: 16.67%  
 ---
 
 ## 🧾 Projektstruktur
 
-```
+```  
 ├── app.py                 # Flask-servern  
 ├── requirements.txt       # Python-beroenden  
 ├── templates/  
@@ -56,7 +64,7 @@ python app.py
 ├── static/  
 │   └── style.css          # Färger och design  
 └── .gitignore  
-
+  
 ```
 
 ---
