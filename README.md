@@ -58,8 +58,11 @@ Du får:
 
 ```
 ├── app-3.py               # Flask-servern valbart vilka som visas
-├── app.py                 # Flask-servern alla visas
 ├── requirements.txt       # Python-beroenden
+├── templates              # 
+│   └── index.html         # Webbgränssnitt
+├── static                 # 
+│   └── style.css          # Layout-stuff
 └── .gitignore
 ```
 
