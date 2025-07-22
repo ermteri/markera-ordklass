@@ -58,7 +58,7 @@ Andel av totala ord: 16.67%
 ## 🧾 Projektstruktur
 
 ```  
-├── app.py                 # Flask-servern  
+├── app-3.py               # Flask-servern  
 ├── requirements.txt       # Python-beroenden  
 ├── templates/  
 │   └── index.html         # Webbgränssnitt  
