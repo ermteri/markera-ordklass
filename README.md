@@ -59,8 +59,7 @@ Andel av totala ord: 15.38%
 
 ordklassmarkerare/
 │
-├── app-3.py                   # Flask-applikationen
-├── install.sh               # Installerar miljö och beroenden
+├── app-3.py                 # Flask-applikationen
 ├── requirements.txt         # Python-bibliotek
 ├── README.md                # Denna fil  
 ├── templates/
