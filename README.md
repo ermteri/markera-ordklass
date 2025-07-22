@@ -57,23 +57,17 @@ Andel av totala ord: 16.67%
 
 ## 🧾 Projektstruktur
 
-```text
 ordklassmarkerare/
 │
 ├── app-3.py                   # Flask-applikationen
 ├── install.sh               # Installerar miljö och beroenden
 ├── requirements.txt         # Python-bibliotek
-├── README.md                # Denna fil
-│
+├── README.md                # Denna fil  
 ├── templates/
-│   └── index.html           # HTML-sida för inmatning och resultat
-│
+│   └── index.html           # HTML-sida för inmatning och resultat  
 ├── static/
 │   └── style.css            # CSS-stilar för färgmarkering
-│
 └── .gitignore               # Ignorera t.ex. env/ och __pycache__/
-```
-
 
 ---
 
