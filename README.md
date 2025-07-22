@@ -57,15 +57,14 @@ Andel av totala ord: 16.67%
 
 ## 🧾 Projektstruktur
 
-```  
+```
 ├── app-3.py               # Flask-servern  
 ├── requirements.txt       # Python-beroenden  
 ├── templates/  
 │   └── index.html         # Webbgränssnitt  
 ├── static/  
 │   └── style.css          # Färger och design  
-└── .gitignore  
-  
+└── .gitignore    
 ```
 
 ---
