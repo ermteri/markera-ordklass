@@ -46,24 +46,30 @@ Klistra in:
 
 > Den vackra staden låg stilla och skimrade i solnedgången.
 
+och tryck på Adjektiv.
+
 Du får:
 
-- **Adjektiv**: _vackra_
-- **Verb**: _låg_, _skimrade_
-- **Adverb**: _stilla_
+Den <span style="color: red; font-weight: bold;">vackra</span> staden låg stilla och skimrade i den <span style="color: red; font-weight: bold;">rödgula</span> solnedgången.
+Totalt antal ord: 12
+
+Antal adjektiv: 2
+
+Andel av totala ord: 16.67%
 
 ---
 
 ## 🧾 Projektstruktur
 
 ```
-├── app-3.py               # Flask-servern valbart vilka som visas
-├── requirements.txt       # Python-beroenden
-├── templates              # 
-│   └── index.html         # Webbgränssnitt
-├── static                 # 
-│   └── style.css          # Layout-stuff
-└── .gitignore
+├── app.py                 # Flask-servern  
+├── requirements.txt       # Python-beroenden  
+├── templates/  
+│   └── index.html         # Webbgränssnitt  
+├── static/  
+│   └── style.css          # Färger och design  
+└── .gitignore  
+
 ```
 
 ---
