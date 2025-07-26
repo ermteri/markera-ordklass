@@ -47,7 +47,7 @@ och klicka på "Adverb"
 
 Du får:  
 Resultat:  
-Den vackra staden låg **stilla** och skimrade i den **mycket** fina solnedgången.  
+Den vackra staden låg "stilla" och skimrade i den "mycket" fina solnedgången.  
 Totalt antal ord: 13  
   
 Antal adjektiv: 2  
