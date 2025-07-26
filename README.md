@@ -1,6 +1,6 @@
 # 🧠 Ordklassmarkerare med Flask + Stanza
 
-Ett enkelt webbgränssnitt där du kan klistra in svensk text och få **adjektiv**, **adverb** och **verb** markerade i olika färger. Bygger på Python, Flask och Stanza.
+Ett enkelt webbgränssnitt där du kan klistra in svensk text och få **adjektiv**, **adverb** och **pronomen** markerade i olika färger. Bygger på Python, Flask och Stanza.
 
 ---
 
@@ -47,7 +47,7 @@ och klicka på "Adverb"
 
 Du får:  
 Resultat:  
-Den vackra staden låg "stilla" och skimrade i den "mycket" fina solnedgången.  
+Den vackra staden låg **stilla** och skimrade i den **mycket** fina solnedgången.  
 Totalt antal ord: 13  
   
 Antal adjektiv: 2  
