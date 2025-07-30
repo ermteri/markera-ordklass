@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ## ▶️ Starta appen
 
 ```bash
-python app-3.py
+python app.py
  
 Öppna sedan `http://127.0.0.1:5000` i din webbläsare.
 
@@ -59,7 +59,7 @@ Andel av totala ord: 15.38%
 
 ordklassmarkerare/
 │
-├── app-3.py                 # Flask-applikationen
+├── app.py                 # Flask-applikationen
 ├── requirements.txt         # Python-bibliotek
 ├── README.md                # Denna fil  
 ├── templates/
