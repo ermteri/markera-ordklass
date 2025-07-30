@@ -37,3 +37,13 @@ textarea {
     margin-top: 1em;
     font-style: italic;
 }
+.privacy-info {
+  background-color: #f1f1f1;
+  padding: 1em;
+  margin-top: 1em;
+  border-left: 4px solid #2196F3;
+  border-radius: 5px;
+}
+.privacy-info h3 {
+  margin-top: 0;
+}

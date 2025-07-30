@@ -12,6 +12,12 @@ POS_MAPPING = {
     'PRON': 'pron'
 }
 
+
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     input_text = ''
