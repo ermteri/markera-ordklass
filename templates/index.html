@@ -10,8 +10,11 @@
        <a href="{{ url_for('privacy') }}">🔐 Integritetspolicy</a>
     </p>
     <h2>Klistra in text och välj ordklass</h2>
+    <button onclick="clearInputField()">Rensa</button>
+    <br>
+    <br>
     <form method="POST">
-        <textarea name="input_text">{{ input_text }}</textarea><br><br>
+        <textarea name="input_text" id="input_text">{{ input_text }}</textarea><br><br>
         <button class="button-basic adj-button" name="show_class" value="adjektiv">Visa Adjektiv</button>
         <button class="button-basic adv-button" name="show_class" value="adverb">Visa Adverb</button>
         <button class="button-basic pron-button" name="show_class" value="pron">Visa Pronomen</button>
@@ -26,5 +29,10 @@
             <p>Andel av totala ord: <strong>{{ percentage }}%</strong></p>
         </div>
     {% endif %}
+    <script>
+        function clearInputField() {
+            document.getElementById('input_text').value = "";
+        }
+    </script>
 </body>
 </html>
